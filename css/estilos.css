@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Lobster|Oleo+Script|Orbitron');
+* {
+	padding: 0px;
+	margin: 0px;
+}
+/* Ventana modal */
+
+.modal-contenido {
+	padding: 10px 20px;
+	margin: 7% auto;
+	text-align: center;
+	position: relative;
+}
+
+.modal {
+	background-color: rgba(0, 0, 0, .8);
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 1s;
+}
+
+#miModal:target {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.modal-body {
+	background-color: #F0F0F0;
+	width: 80%;
+	margin: auto;
+}
+
+.modal-header,
+.modal-footer {
+	width: 100%;
+	height: 50px;
+	text-align: right;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+}
+
+.modal-header> a {
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	text-align: right;
+	margin-right: 20px;
+	margin-top: 15px;
+	color: #9c9a9a;
+	cursor: pointer;
+}
+.modal-header h2{
+	text-align: center;
+	margin-right: 75px;
+	display: inline-block;
+color: #807272;
+	font-family: 'Lobster', cursive;
+}
+
+.modal-button {
+	margin-right: 20px;
+}
+
+.modal-button input[type=button]  {
+	padding: 2px;
+	border: 1px solid #ddd;
+	/* background-color: #f0f0f0; */
+	color: #f0f0f0;
+	padding: 4px;
+	font-size: 1em;
+	margin-top: 10px;
+	cursor: pointer;
+	background-color: #79d64d;font-family: 'Lobster', cursive;
+
+}.modal-button a{
+	text-decoration: none;
+}
+.hvalor{
+	padding: 8px;
+	 border: none; 
+	margin-bottom: 4px;
+	margin-right: 4px;
+	text-align: center;
+	width: 69%;
+	background-color: #F0F0F0;
+}
+
+/* final */
+
+.nav {
+	float: right;
+	height: 40px;
+	width: 35px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+#nmenu {
+	width: 100%;
+	height: 100%;
+}
+
+#cabeza {
+	height: 50px;
+	padding-top: 10px;
+	background-color: #C5C6C8;
+	position: relative;
+}
+
+.list_menu,
+.ocultar-menu {
+	position: fixed;
+	top: 3rem;
+	z-index: 20;
+	margin: 0px;
+	width: 50%;
+	padding: .8em 1em;
+	background-color: #1E1A20;
+	opacity: 1;
+	right: 2em;
+	transition: all .4s;
+}
+
+.list_menu span,
+.ocultar-menu,
+span {
+	color: #585353;
+}
+
+.abajo {
+	margin-bottom: 38px;
+}
+
+.ocultar-menu {
+	opacity: 0;
+	display: none;
+	transition: all .3s;
+}
+
+.list_menu ul,
+.ocultar-menu ul {
+	list-style: none;
+}
+
+.list_menu a,
+.ocultar-menu a {
+	line-height: 2.2;
+	text-decoration: none;
+	color: #eee;
+}
+
+#cabeza header {
+	display: inline-block;
+	margin-left: 16px;
+	font-size: 1.3em;
+	color: #807272;
+	font-family: 'Audiowide', cursive;
+}
+
+.body-cal {
+	height: 570px;
+	margin: auto;
+}
+
+#numeros {
+	height: 360px;
+	width: 100%;
+}
+
+.otros {
+	height: 51px;
+	width: 100%;
+}
+
+.otros input[type=button] {
+	width: 20.5%;
+	height: 50.5px;
+	font-size: 1.3em;
+}
+
+body {
+	background-color: #F0F0F0;
+}
+
+#pantalla {
+	width: 100%;
+	height: 160px;
+	margin: 0 auto;
+	background-color: #F0F0F0;
+}
+
+#monitor {
+	height: 90px;
+}
+
+#subresult {
+	width: 100%;
+	background-color: #F0F0F0;
+	height: 30px;
+	border: none;
+	font-size: 1em;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+#result {
+	height: 60px;
+	border: none;
+	width: 98%;
+	font-size: 3.4em;
+	background-color: #F0F0F0;
+	text-align: right;
+}
+
+.btn-num {
+	border: 2px solid #eaeaea;
+	width: 25.5%;
+	height: 72px;
+	font-size: 2em;
+	margin: 0px -5px 0px 0px;
+	color: rgba(150, 150, 150, 0.87);
+	background-color: #DBDCDE;
+	cursor: pointer;
+}
+
+.btn-igual {
+	width: 50.1%;
+	background-color: #79d64d;
+}
+
+.activo1 {
+	background-color: #C5C6C8;
+}
+
+.activo3 {
+	background-color: #FF9202;
+}
+
+@media (min-width:570px) {
+	.btn-num {
+		font-size: 1.4em;
+		height: 45px;
+		width: 20.3%;
+	}
+	.activo1 {
+		width: 27%;
+	}
+	.mover {
+		float: left;
+	}
+	#subresult {
+		margin-bottom: -5px;
+	}
+	#result {
+		font-size: 3em;
+	}
+	#pantalla {
+		height: 140px;
+	}
+	#monitor {
+		height: 70px;
+	}
+	.otros input[type=button] {
+		height: 43px;
+		width: 20.1%;
+		position: relative;
+	}
+	.otros {
+		height: 40px;
+	}
+	.body-cal {
+		height: 360px;
+	}
+	#numeros {
+		height: 180px;
+	}
+	#cabeza header {
+		margin-left: 2.2em;
+	}
+}

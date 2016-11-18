@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.infosolucones.camara" versionCode="1.0" version="1.0">
+	<name>Cal-Christian</name>
+
+	<description>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate asperiores sapiente, laudantium, temporibus beatae enim aliquam perspiciatis sint quibusdam sit consequatur vel atque rerum debitis et laboriosam consequuntur ducimus. Architecto. </description>
+
+
+	<icon src="Icon.png" />
+	<gap:splash src="splash.png" />
+	<access origin="" />
+</widget>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora Html5</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="css/estilos.css"> -->
+	<link rel="stylesheet" href="css/jquery.css">
+	<link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css">
+</head>
+
+<body onload="borrar()">
+	<div id="home" data-role="page">
+		<div data-role="content">
+			<div class="img">
+				<img src="img/calculadora.png" id="perfil">
+				
+				<c>Actualizacion: 26/10/2016</c><br>
+				<c>Version: 5.1</c> 
+			</div>
+			<a href="#calculadora" data-role="button" class=" ui-btn-inline" data-transition="slide" id="ir">Calculadora</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="calculadora">
+		<div data-role="collapsible-set" data-content-theme="a" data-theme="a">
+			<div data-role="collapsible">
+				<h3>Historial</h3>
+				<div data-role="content" data-theme="a" id="btnBH">
+				<div id="dataHistory"></div>
+					<!-- <input type="text" class="hvalor" id="h1" readonly>
+					<input type="text" class="hvalor" id="h2" readonly>
+					<input type="text" class="hvalor" id="h3" readonly>
+					<input type="text" class="hvalor" id="h4" readonly>
+					<input type="text" class="hvalor" id="h5" readonly>
+					<input type="text" class="hvalor" id="h1" readonly> -->
+					<input type="button" value="Limpiar" onclick="borrarH()" >
+				</div>
+			</div>
+		</div>
+
+		<div data-role="content">
+
+			<input type="text" readonly id="subresult" value=" ">
+			<input type="text" id="result" name="result" value=" " readonly>
+
+			<div class="ui-grid-d ">
+				<div class="ui-block-c">
+					<a href="" data-role="button" onclick="borrar()" class="ui-shadow ui-btn ui-corner-all">C</a>
+				</div>
+				<div class="ui-block-c ">
+					<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onclick="Bretroceder()">CE</a>
+				</div>
+				<div class="ui-block-c">
+					<div class="button-wrap">
+						<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onclick="Gmemoria()">M</a>
+					</div>
+				</div>
+				<div class="ui-block-d">
+					<a href="" data-role="button" onclick="Mmemoria()" class="ui-shadow ui-btn ui-corner-all">MR</a>
+				</div>
+				<div class="ui-block-e">
+					<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onclick="Bmemoria()">MC</a>
+				</div>
+			</div>
+
+			<div class="ui-grid-c ">
+				<div class="ui-block-a">
+					<a href="" data-role="button" onclick="operar('exp')" class="ui-shadow ui-btn ui-corner-all">x²</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onclick="operar('raiz')">√</a>
+				</div>
+				<div class="ui-block-c">
+					<a href="" data-role="button" onClick="operar('porcentaje')" class="ui-shadow ui-btn ui-corner-all">%</a>
+				</div>
+				<div class="ui-block-d">
+					<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onClick="operar('multiplicar')">X</a>
+				</div>
+			</div>
+
+			<div class="ui-grid-c ">
+				<div class="ui-block-a">
+					<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onClick="mostar_num('7')">7</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onClick="mostar_num('8')">8</a>
+				</div>
+				<div class="ui-block-c">
+					<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onClick="mostar_num('9')">9</a>
+				</div>
+				<div class="ui-block-d">
+					<a href="" data-role="button" onClick="operar('dividir')" class="ui-shadow ui-btn ui-corner-all">/</a>
+				</div>
+			</div>
+			<div class="ui-grid-c ">
+				<div class="ui-block-a">
+					<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onClick="mostar_num('4')">4</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onClick="mostar_num('5')">5</a>
+				</div>
+				<div class="ui-block-c">
+					<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onClick="mostar_num('6')">6</a>
+				</div>
+				<div class="ui-block-d">
+					<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onClick="operar('suma')">+</a>
+				</div>
+			</div>
+
+			<div class="ui-grid-c ">
+				<div class="ui-block-a">
+					<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onClick="mostar_num('1')">1</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onClick="mostar_num('2')">2</a>
+				</div>
+				<div class="ui-block-c">
+					<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onClick="mostar_num('3')">3</a>
+				</div>
+				<div class="ui-block-d">
+					<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onClick="operar('restar')">-</a>
+
+				</div>
+			</div>
+			<div class="ui-grid-c ">
+				<div class="ui-block-a">
+					<a href="" data-role="button" class="ui-shadow ui-btn ui-corner-all" onClick="mostar_num('0')">0</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="" data-role="button" onClick="mostar_num('.')" class="ui-shadow ui-btn ui-corner-all">.</a>
+				</div>
+				<div class="ui-block-b">
+					<input type="button" value="=" class="ui-shadow ui-btn ui-corner-all" onClick="esIgual()">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+	<script src="js/jquery/jquery-1.1.1.min.js"></script>
+	<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+
+</body>
+
+</html>
